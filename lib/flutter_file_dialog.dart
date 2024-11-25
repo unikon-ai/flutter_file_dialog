@@ -99,8 +99,13 @@ class DirectoryLocation {
 
   DirectoryLocation._(this._rawUri);
 
+  factory DirectoryLocation(String uri) {
+    return DirectoryLocation._(uri);
+  }
+
   String toString() => _rawUri;
 }
+
 
 /// Dialog types for [pickFile] (iOS only)
 enum OpenFileDialogType { document, image }
